@@ -210,12 +210,14 @@
                             <input type="name" class="form-control" id="inputAddress2" placeholder="">
                         </div>
                         <div class="col-6 mt-3">
-                            <label for="inputAddress2" class="form-label">Son's Name</label>
-                            <input type="name" class="form-control" id="inputAddress2" placeholder="">
+                            <label for="numOfSons">Number of Sons:</label>
+                            <input type="number" class="form-control" id="numOfSons" name="numOfSons" min="1">
+                            <div id="sonsInputs" class="mt-3"></div><br>
                         </div>
                         <div class="col-6 mt-3">
-                            <label for="inputAddress2" class="form-label">Daughter's Name</label>
-                            <input type="name" class="form-control" id="inputAddress2" placeholder="">
+                            <label for="numOfDaughters">Number of Daughters:</label>
+                            <input type="number" class="form-control" id="numOfDaughters" name="numOfDaughters" min="1">
+                            <div id="childrenInputs"></div><br>
                         </div>
                         <div class="col-12 mt-3">
                             <div class="form-check">
@@ -356,6 +358,58 @@
     <!-- custom scripts -->
     <script src="assets/js/scripts.js"></script>
 
+    <script>
+        document.getElementById('numOfSons').addEventListener('change', function () {
+            var numOfSons = this.value;
+            var inputsDiv = document.getElementById('sonsInputs');
+            inputsDiv.innerHTML = ''; // Clear previous inputs
+
+            for (var i = 1; i <= numOfSons; i++) {
+                var sonDiv = document.createElement('div');
+                sonDiv.className = 'form-group';
+
+                var label = document.createElement('label');
+                label.textContent = 'Son ' + i + ' Name:';
+                label.className = 'control-label';
+
+                var input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'form-control';
+                input.name = 'son' + i;
+                input.placeholder = 'Enter Your ' + i + 'st Son Name';
+
+                sonDiv.appendChild(label);
+                sonDiv.appendChild(input);
+                inputsDiv.appendChild(sonDiv);
+            }
+        });
+    </script>
+    <script>
+        document.getElementById('numOfDaughters').addEventListener('change', function () {
+            var numOfChildren = this.value;
+            var inputsDiv = document.getElementById('childrenInputs');
+            inputsDiv.innerHTML = ''; // Clear previous inputs
+
+            for (var i = 1; i <= numOfChildren; i++) {
+                var childDiv = document.createElement('div');
+                childDiv.className = 'form-group';
+
+                var label = document.createElement('label');
+                label.textContent = 'Daughter ' + i + ' Name:';
+                label.className = 'control-label';
+
+                var input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'form-control';
+                input.name = 'child' + i;
+                input.placeholder = 'Enter Your ' + i + 'st Daughter Name';
+
+                childDiv.appendChild(label);
+                childDiv.appendChild(input);
+                inputsDiv.appendChild(childDiv);
+            }
+        });
+    </script>
 </body>
 
 
