@@ -129,50 +129,65 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Directory Ahlay Barsat Form</h2>
+                    <div class="alert alert-warning text-dark fw-bold" role="alert">
+                        Note: This form MUST be filled in and submitted for each & every male (Son of Barsat)
+                        separately.
+                        <br>
+                        Date the form filled in and submitted
+                    </div>
                     <br><br>
                     <form class="row g-3">
                         <div class="col-md-6 mt-3">
                             <label for="inputEmail4" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Your Name">
                         </div>
                         <div class="col-md-6 mt-3">
                             <label for="inputfathername" class="form-label">Father Name</label>
-                            <input type="text" class="form-control" id="inputfathername">
+                            <input type="text" class="form-control" id="inputfathername" placeholder="Your Father Name">
                         </div>
                         <div class="col-md-6 mt-3">
                             <label for="g1inputfathername" class="form-label">Grand Father Name</label>
-                            <input type="text" class="form-control" id="g1inputfathername">
+                            <input type="text" class="form-control" id="g1inputfathername"
+                                placeholder="Your Grand Father Name">
                         </div>
                         <div class="col-md-6 mt-3">
                             <label for="g2inputfathername" class="form-label">Grand Grand Father Name</label>
-                            <input type="text" class="form-control" id="g2inputfathername">
+                            <input type="text" class="form-control" id="g2inputfathername"
+                                placeholder="Your Grand Grand Father Name">
                         </div>
                         <div class="col-md-6 mt-3">
                             <label for="g3inputfathername" class="form-label">Grand Grand Grand Father Name</label>
-                            <input type="text" class="form-control" id="g3inputfathername">
+                            <input type="text" class="form-control" id="g3inputfathername"
+                                placeholder="Your Grand Grand Grand Father Name">
                         </div>
-                        <div class="col-6 mt-3">
-                            <label for="inputAddress" class="form-label">Referance With Barsat</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Any Referance">
+                        <div class="col-md-6 mt-3">
+                            <label for="inputState" class="form-label">Documentary Referance With Barsat</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>Directory 1978 Page</option>
+                                <option>Shajrah 1980 Page</option>
+                                <option>Ladies Particular</option>
+                            </select>
                         </div>
                         <div class="col-md-6 mt-3">
                             <label for="g2inputfathername" class="form-label">Education</label>
                             <input type="text" class="form-control" id="g2inputfathername">
                         </div>
                         <div class="col-md-6 mt-3">
-                            <label for="inputState" class="form-label">Status</label>
+                            <label for="inputState" class="form-label">Marital Status</label>
                             <select id="inputState" class="form-select">
                                 <option selected>Choose...</option>
                                 <option>Married</option>
-                                <option>Non-Married</option>
+                                <option>Un-Married</option>
+                                <option>Divorced</option>
                             </select>
                         </div>
                         <div class="col-md-6 mt-3">
-                            <label for="inputState" class="form-label">Job</label>
+                            <label for="inputState" class="form-label">Profession</label>
                             <select id="inputState" class="form-select">
                                 <option selected>Choose...</option>
-                                <option>Government</option>
-                                <option>Serving</option>
+                                <option>Service</option>
+                                <option>Business</option>
                             </select>
                         </div>
                         <div class="col-md-6 mt-3">
@@ -202,39 +217,59 @@
                                 placeholder="Apartment, studio, or floor">
                         </div>
                         <div class="col-6 mt-3">
+                            <label for="inputAddress2" class="form-label">Other Capabilities</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="Any Capability">
+                        </div>
+                        <div class="col-6 mt-3">
                             <label for="inputAddress2" class="form-label">Contact Number</label>
                             <input type="number" class="form-control" id="inputAddress2" placeholder="+92 ">
                         </div>
-                        <div class="col-6 mt-3">
-                            <label for="inputAddress2" class="form-label">Wife</label>
-                            <input type="name" class="form-control" id="inputAddress2" placeholder="">
+                        <div class="col-3 mt-2">
+                            <label for="inputState" class="form-label">Wife's Detail</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>Syed</option>
+                                <option>Non Syed</option>
+                            </select>
+                        </div>
+                        <div class="col-3 mt-3">
+                            <label for="numOfDaughters">Wife's Father Name:</label>
+                            <input type="number" class="form-control" id="numOfDaughters" name="numOfDaughters" min="1"
+                                placeholder="Wife's Father Name">
+                            <div id="childrenInputs"></div><br>
+                        </div>
+                        <div class="col-3 mt-3">
+                            <label for="numOfDaughters">Wife's Education:</label>
+                            <input type="number" class="form-control" id="numOfDaughters" name="numOfDaughters" min="1"
+                                placeholder="Wife's Education">
+                            <div id="childrenInputs"></div><br>
+                        </div>
+                        <div class="col-3 mt-3">
+                            <label for="numOfDaughters">Wife's City/Country:</label>
+                            <input type="number" class="form-control" id="numOfDaughters" name="numOfDaughters" min="1"
+                                placeholder="Wife's City">
+                            <div id="childrenInputs"></div><br>
                         </div>
                         <div class="col-12 mt-3">
                             <div class="bg-white p-2">
                                 <label for="imageInput">Select Image:</label>
                                 <input type="file" class="form-control-file" id="imageInput" name="imageInput"
-                                    accept="image/*">
+                                    accept="image/*" required>
                                 <small id="sizeInfo" class="form-text text-muted">Maximum file size: 1 MB to 5
                                     MB</small>
                             </div>
                         </div>
                         <div class="col-6 mt-3">
-                            <label for="numOfSons">Number of Sons:</label>
-                            <input type="number" class="form-control" id="numOfSons" name="numOfSons" min="1">
+                            <label for="numOfSons">Details of Sons:</label>
+                            <input type="number" class="form-control" id="numOfSons" name="numOfSons" min="1"
+                                placeholder="Any Son">
                             <div id="sonsInputs" class="mt-3"></div><br>
                         </div>
                         <div class="col-6 mt-3">
-                            <label for="numOfDaughters">Number of Daughters:</label>
-                            <input type="number" class="form-control" id="numOfDaughters" name="numOfDaughters" min="1">
+                            <label for="numOfDaughters">Details of Daughters:</label>
+                            <input type="number" class="form-control" id="numOfDaughters" name="numOfDaughters" min="1"
+                                placeholder="Any Daughter">
                             <div id="childrenInputs"></div><br>
-                        </div>
-                        <div class="col-12 mt-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" class="btn btn-primary">Sign in</button>
